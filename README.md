@@ -80,7 +80,7 @@ https://github.com/wartem/WartemProjectHub
 2. Follow the prompts to name your project and set up initial configurations.
 
 ## Project List
-- A version of [CO2-Transport-Calculator-Exampl](https://github.com/Wartem/CO2-Transport-Calculator-Example)
+- A version of [CO2-Transport-Calculator-Example](https://github.com/Wartem/CO2-Transport-Calculator-Example)
 
 ## License
 This project is licensed under the MIT License.
