@@ -1,4 +1,4 @@
-[![GitHub last commit](https://img.shields.io/github/last-commit/Wartem/WartemProjectHub)](https://github.com/Wartem/WartemProjectHub/commits/main)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Wartem/WartemProjectHub)](https://github.com/Wartem/WartemProjectHub/commits/master)
 
 # WartemProjectHub
 
