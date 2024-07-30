@@ -31,6 +31,7 @@ WartemProjectHub is a centralized platform for managing and showcasing various p
 - Automated project creation tool
 
 ## Project Structure
+```
 WartemProjectHub/
 ├── app.py # Main application file
 ├── wsgi.py # WSGI entry point
@@ -54,7 +55,7 @@ WartemProjectHub/
 ├── routes.py
 └── templates/
 └── project.html
-
+```
 
 ## Getting Started
 
