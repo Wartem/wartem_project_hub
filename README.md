@@ -7,7 +7,7 @@
 # WartemProjectHub
 
 ## Overview
-WartemProjectHub is a centralized platform for managing and showcasing various projects developed under the Wartem brand. This hub provides a unified interface for accessing multiple projects, each with its own unique functionality and purpose.
+WartemProjectHub is a centralized platform for managing and showcasing various projects developed under the name Wartem. This hub provides a unified interface for accessing multiple projects, each with its own unique functionality and purpose.
 
 ## Table of Contents
 - [Features](#features)
@@ -19,9 +19,7 @@ WartemProjectHub is a centralized platform for managing and showcasing various p
   - [Running the Project Hub](#running-the-project-hub)
   - [Creating a New Project](#creating-a-new-project)
 - [Project List](#project-list)
-- [Contributing](#contributing)
 - [License](#license)
-- [Contact](#contact)
 
 ## Features
 - Centralized management of multiple projects
@@ -82,9 +80,7 @@ https://github.com/wartem/WartemProjectHub
 2. Follow the prompts to name your project and set up initial configurations.
 
 ## Project List
-- Project 1: Brief description
-- Project 2: Brief description
-- [Add more projects as they are created]
+- A version of [CO2-Transport-Calculator-Exampl](https://github.com/Wartem/CO2-Transport-Calculator-Example)
 
 ## License
 This project is licensed under the MIT License.
