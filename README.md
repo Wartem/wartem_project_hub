@@ -19,6 +19,7 @@ WartemProjectHub is a centralized platform for managing and showcasing various p
   - [Running the Project Hub](#running-the-project-hub)
   - [Creating a New Project](#creating-a-new-project)
 - [Project List](#project-list)
+- [Acknowledgements](#acknowledgements)
 - [License](#license)
 
 ## Features
@@ -81,6 +82,11 @@ https://github.com/wartem/WartemProjectHub
 
 ## Project List
 - A version of [CO2-Transport-Calculator-Example](https://github.com/Wartem/CO2-Transport-Calculator-Example)
+
+## Acknowledgements
+This project was developed with the significant assistance of Perplexity AI (https://www.perplexity.ai), an innovative AI tool that greatly facilitated the research and development process. Perplexity AI provided invaluable guidance on project structure, coding practices, and documentation. It helped streamline the gathering of information and offered crucial insights into the structure and functionality of the application.
+
+The AI's contributions were instrumental in clarifying concepts, generating code, and creating comprehensive documentation for this project. This acknowledgment serves to recognize the pivotal role that Perplexity AI played in the development of WartemProjectHub.
 
 ## License
 This project is licensed under the MIT License.
