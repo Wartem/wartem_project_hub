@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Carbon Footprint Calculator{% endblock %}
+
+{% block content %}
+<h1>Calculate Your Carbon Footprint</h1>
+<form method="POST">
+    <label for="distance">Enter distance (km):</label>
+    <input type="number" name="distance" required>
+    <button type="submit">Calculate</button>
+</form>
+{% endblock %}
