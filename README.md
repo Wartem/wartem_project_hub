@@ -1,4 +1,8 @@
-[![GitHub last commit](https://img.shields.io/github/last-commit/Wartem/WartemProjectHub)](https://github.com/Wartem/WartemProjectHub)
+![Python](https://img.shields.io/badge/language-Python-blue.svg)
+![HTML](https://img.shields.io/badge/language-HTML-orange.svg)
+![CSS](https://img.shields.io/badge/language-CSS-green.svg)
+![Flask](https://img.shields.io/badge/framework-Flask-lightgrey.svg)
+![Jinja](https://img.shields.io/badge/template%20engine-Jinja-yellow.svg)
 
 # WartemProjectHub
 
