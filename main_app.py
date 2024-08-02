@@ -3,6 +3,20 @@ import os
 import importlib
 import json
 
+import sys
+import os
+project_root = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, project_root)
+
+import sys
+print(f"Python path: {sys.executable}")
+print(f"Python version: {sys.version}")
+
+import subprocess
+result = subprocess.run([sys.executable, "-m", "pip", "list"], capture_output=True, text=True)
+print("Installed packages:")
+print(result.stdout)
+
 app = Flask(__name__)
 
 def get_project_info(project_dir):
@@ -46,4 +60,5 @@ if __name__ == '__main__':
     print("Registered routes:")
     for rule in app.url_map.iter_rules():
         print(f"{rule.endpoint}: {rule.rule}")
-    app.run(debug=True)
+    # app.run(debug=True) For debugging
+    app.run(host='0.0.0.0', port=8080, debug=True)

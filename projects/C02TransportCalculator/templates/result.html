@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}CO2 Emissions Results{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    .chart-container, .table-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .chart-container img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .table-container {
+        overflow-x: auto;
+        margin-top: 10px;
+    }
+    .emissions-table {
+        width: 100%;
+    }
+    .emissions-table th, .emissions-table td {
+        padding: 8px;
+        text-align: left;
+        white-space: nowrap;
+    }
+    .emissions-table th {
+        background-color: #4285F4;
+        color: white;
+        cursor: pointer;
+    }
+    .emissions-table tr:nth-child(even) {
+        background-color: #f8f9fa;
+    }
+    .emissions-table tr:hover {
+        background-color: #e9ecef;
+    }
+    .emissions-table .numeric {
+        text-align: right;
+    }
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: #4285F4;
+    }
+    .btn-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <h1 class="mb-2">CO2 Emissions Results</h1>
+    <p class="lead mb-3">Results for a travel distance of <strong>{{ distance }} km</strong></p>
+    
+    <div class="row">
+        <div class="col-12">
+            <h2 class="mb-3">Emissions Chart</h2>
+            <div class="chart-container"> 
+                <img src="data:image/png;base64,{{ plot_url }}" alt="CO2 Emissions Plot" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-12">
+            <h2 class="mb-3">Emissions Table</h2>
+            <div class="table-container">
+                {{ table_data|safe }}
+            </div>
+        </div>
+    </div>
+    
+    <div class="btn-container">
+        <a href="{{ url_for('CO2TransportCalculator.index') }}" class="btn btn-primary">Calculate Again</a>
+    </div>
+</div>
+
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.querySelector(".emissions-table");
+  switching = true;
+  dir = "asc";
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (parseFloat(x.innerHTML) > parseFloat(y.innerHTML)) {
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (parseFloat(x.innerHTML) < parseFloat(y.innerHTML)) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var headers = document.querySelectorAll('.emissions-table th');
+    headers.forEach(function(header, index) {
+        header.addEventListener('click', function() {
+            sortTable(index);
+        });
+    });
+});
+</script>
+{% endblock %}
