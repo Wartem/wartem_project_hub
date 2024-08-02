@@ -30,7 +30,7 @@ WartemProjectHub is a centralized platform for managing and showcasing various p
 - Customizable project display names
 - Automated project creation tool
 
-### Deployment
+## Deployment
 This application is deployed and accessible at the following URL:
 [https://kcs5yr-8080.csb.app/](https://kcs5yr-8080.csb.app/)
 You can visit this link to interact with the live version of the application.
