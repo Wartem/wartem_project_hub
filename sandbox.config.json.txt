@@ -1,0 +1,6 @@
+{
+  "container": {
+    "node": "16"
+  },
+  "startCommand": "python main_app.py"
+}
