@@ -3,6 +3,260 @@
 {% block title %}About - Wartem's Project Hub{% endblock %}
 
 {% block content %}
-<h2>About Project Hub</h2>
-<p>Project Hub is a platform for showcasing and managing various projects. It provides an easy way to create, view, and explore different projects in one centralized location.</p>
+<div class="about-container">
+    <section class="hero">
+        <h1>Welcome to Wartem's Project Hub</h1>
+        <p class="lead">Your one-stop platform for showcasing and running projects.</p>
+    </section>
+
+    <section class="mission">
+        <h2>Our Purpose</h2>
+        <p class="mission-statement">Wartem's Project Hub is a centralized platform designed for anyone to showcase their projects in one place. It provides an easy way to display and run various projects from a single location, making project management and presentation simpler and more efficient.</p>
+    </section>
+
+    <section class="features">
+        <h2>What We Offer</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <i class="fas fa-project-diagram"></i>
+                <h3>Project Showcase</h3>
+                <p>Display all your projects in an organized, easy-to-navigate format.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-play-circle"></i>
+                <h3>Run Projects</h3>
+                <p>Execute and demonstrate your projects directly from the hub.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-th-large"></i>
+                <h3>Centralized Management</h3>
+                <p>Manage all your projects from a single, convenient location.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-user-friends"></i>
+                <h3>Open Platform</h3>
+                <p>Accessible to anyone who wants to showcase their work.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Upload Your Project</h3>
+                <p>Easily upload your project files and documentation to the hub.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Configure Display</h3>
+                <p>Set up how your project will be displayed and interacted with.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Share and Run</h3>
+                <p>Share your project with others and run it directly from the hub.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"Wartem's Project Hub has transformed how I manage my projects! I can finally showcase my potato collection with ease!"</p>
+                <cite>- Tubercle Taterhoarder, Professional Potato Collector</cite>
+            </div>
+            <div class="testimonial">
+                <p>"As a time traveler, this platform has been invaluable for presenting my work to historical figures. They love it!"</p>
+                <cite>- Doc Brown, Time Travel Enthusiast</cite>
+            </div>
+            <div class="testimonial">
+                <p>"I never knew how easy it could be to showcase my intergalactic travel logs until I found this hub!"</p>
+                <cite>- Zog the Alien, Galactic Explorer</cite>
+            </div>
+            <div class="testimonial">
+                <p>"This hub is out of this world! I can finally display my collection of rare cheese from different planets!"</p>
+                <cite>- Cheddar McCheeseface, Cheese Connoisseur</cite>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to Showcase Your Projects?</h2>
+        <p class="cta-text">Join Wartem's Project Hub and start displaying your work in one centralized location.</p>
+        <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+    </section>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .hero {
+        text-align: center;
+        margin-bottom: 60px;
+        background-color: #f8f9fa;
+        padding: 60px 20px;
+        border-radius: 8px;
+    }
+
+    .hero h1 {
+        font-size: 3.5em;
+        color: #35424a;
+        margin-bottom: 20px;
+    }
+
+    .hero .lead {
+        font-size: 1.8em;
+        color: #3c79eb;
+    }
+
+    section {
+        margin-bottom: 80px;
+    }
+
+    h2 {
+        color: #35424a;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    .mission-statement {
+        font-size: 1.4em;
+        line-height: 1.6;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        color: #35424a;
+    }
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .feature-item {
+        text-align: center;
+        padding: 30px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .feature-item i {
+        font-size: 3em;
+        color: #3c79eb;
+        margin-bottom: 20px;
+    }
+
+    .how-it-works .steps {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .step {
+        text-align: center;
+        padding: 20px;
+        max-width: 300px;
+    }
+
+    .step-number {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        background-color: #3c79eb;
+        color: white;
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .testimonials .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .testimonial {
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .testimonial p {
+        font-style: italic;
+        margin-bottom: 10px;
+    }
+
+    .testimonial cite {
+        font-weight: bold;
+    }
+
+    .cta {
+        text-align: center;
+        background-color: #3c79eb;
+        padding: 80px 20px;
+        border-radius: 8px;
+        color: white;
+    }
+
+    .cta h2 {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .cta-text {
+        font-size: 1.4em;
+        margin-bottom: 30px;
+    }
+
+    .cta .btn {
+        font-size: 1.2em;
+        padding: 15px 30px;
+        background-color: white;
+        color: #3c79eb;
+        border: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .cta .btn:hover {
+        background-color: #35424a;
+        color: white;
+    }
+
+    @media screen and (max-width: 768px) {
+        .hero h1 {
+            font-size: 2.5em;
+        }
+
+        .hero .lead {
+            font-size: 1.4em;
+        }
+
+        .mission-statement {
+            font-size: 1.2em;
+        }
+
+        .cta-text {
+            font-size: 1.2em;
+        }
+    }
+</style>
 {% endblock %}
