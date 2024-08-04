@@ -31,14 +31,16 @@ WartemProjectHub is a centralized platform for managing and showcasing various p
 - Automated project creation tool
 
 ## Deployment
-This application is deployed and accessible at the following URL:
-[https://kcs5yr-8080.csb.app/](https://kcs5yr-8080.csb.app/)
-You can visit this link to interact with the live version of the application.
+This application is deployed and accessible at the following URLs:
+- [https://wartem.xyz](https://wartem.xyz)
+- [https://9jh73c-5000.csb.app/](https://9jh73c-5000.csb.app/)
+
+You can visit these links to interact with the live versions of the application.
 
 ## Project Structure
 ```
 WartemProjectHub/
-├── app.py # Main application file
+├── main_app.py # Main application file
 ├── wsgi.py # WSGI entry point
 ├── requirements.txt # Main project dependencies
 ├── create_project.py # Script for creating new projects
@@ -48,17 +50,22 @@ WartemProjectHub/
 ├── static/ # Static files (CSS, JS, images)
 ├── projects/ # Directory containing all projects
 │ ├── existing_project/
-│ │ ├── app.py
-│ │ ├── routes.py
-│ │ ├── requirements.txt
+│ │ ├── init.py
 │ │ ├── project_config.json
+│ │ ├── project_main.py
+│ │ ├── routes.py
 │ │ └── templates/
+│ │ ├── index.html
+│ │ └── project.html
 │ └── new_project/
 │ ├── ...
 └── project_template/ # Template for new projects
-├── app.py
+├── init.py
+├── project_config.json
+├── project_main.py
 ├── routes.py
 └── templates/
+├── index.html
 └── project.html
 ```
 
@@ -72,8 +79,11 @@ WartemProjectHub/
 1. Clone the repository:
 https://github.com/wartem/WartemProjectHub
 
-2. Navigate to the project directory: cd WartemProjectHub
-3. Install the required dependencies: pip install -r requirements.txt
+2. Navigate to the project directory:
+   cd WartemProjectHub
+   
+4. Install the required dependencies:
+   pip install -r requirements.txt
 
 ## Usage
 
