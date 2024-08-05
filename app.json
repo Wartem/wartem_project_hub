@@ -1,0 +1,11 @@
+{
+    "name": "Wartem Project Hub",
+    "description": "A centralized platform for managing and showcasing various projects developed under the name Wartem.",
+    "repository": "https://github.com/Wartem/WartemProjectHub",
+    "keywords": ["python", "flask", "project management"],
+    "buildpacks": [
+      {
+        "url": "heroku/python"
+      }
+    ]
+  }
