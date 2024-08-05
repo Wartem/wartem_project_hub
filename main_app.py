@@ -56,9 +56,20 @@ for project in os.listdir(projects_dir):
             print(f"Could not import routes for project: {project}. Error: {e}")
 
 # At the end of app.py
+'''
 if __name__ == '__main__':
     print("Registered routes:")
     for rule in app.url_map.iter_rules():
         print(f"{rule.endpoint}: {rule.rule}")
     # app.run(debug=True) For debugging
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)'''
+
+if __name__ == '__main__':
+    print("Registered routes:")
+    for rule in app.url_map.iter_rules():
+        print(f"{rule.endpoint}: {rule.rule}")
+    
+    port = int(os.environ.get('PORT', 5500))
+    debug_mode = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+    
+    app.run(host='0.0.0.0', port=port, debug=debug_mode)
