@@ -89,7 +89,7 @@ https://github.com/wartem/WartemProjectHub
 
 ### Running the Project Hub
 1. Start the application: python app.py
-2. Open a web browser and navigate to `http://localhost:5000`
+2. Open a web browser and navigate to `http://localhost:5500`
 
 ### Creating a New Project
 1. Run the project creation script: python create_project.py
@@ -101,8 +101,6 @@ https://github.com/wartem/WartemProjectHub
 
 ## Acknowledgements
 This project was developed with the significant assistance of Perplexity AI (https://www.perplexity.ai), an innovative AI tool that greatly facilitated the research and development process. Perplexity AI provided invaluable guidance on project structure, coding practices, and documentation. It helped streamline the gathering of information and offered crucial insights into the structure and functionality of the application.
-
-The AI's contributions were instrumental in clarifying concepts, generating code, and creating comprehensive documentation for this project. This acknowledgment serves to recognize the pivotal role that Perplexity AI played in the development of WartemProjectHub.
 
 ## License
 This project is licensed under the MIT License.
