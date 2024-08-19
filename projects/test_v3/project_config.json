@@ -1,0 +1,7 @@
+{
+    "project_name": "test_v3",
+    "display_name": "Test of 3.0",
+    "debug": true,
+    "port": 5600,
+    "secret_key": "default_secret_key_replace_me_in_production"
+}

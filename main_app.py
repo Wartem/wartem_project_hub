@@ -9,13 +9,6 @@ project_root = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, project_root)
 
 import sys
-print(f"Python path: {sys.executable}")
-print(f"Python version: {sys.version}")
-
-import subprocess
-result = subprocess.run([sys.executable, "-m", "pip", "list"], capture_output=True, text=True)
-print("Installed packages:")
-print(result.stdout)
 
 app = Flask(__name__)
 
@@ -54,15 +47,6 @@ for project in os.listdir(projects_dir):
                 app.register_blueprint(module.bp, url_prefix=f'/{project}')
         except ImportError as e:
             print(f"Could not import routes for project: {project}. Error: {e}")
-
-# At the end of app.py
-'''
-if __name__ == '__main__':
-    print("Registered routes:")
-    for rule in app.url_map.iter_rules():
-        print(f"{rule.endpoint}: {rule.rule}")
-    # app.run(debug=True) For debugging
-    app.run(host='0.0.0.0', port=5000, debug=True)'''
 
 if __name__ == '__main__':
     print("Registered routes:")

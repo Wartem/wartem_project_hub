@@ -13,7 +13,7 @@
     
     {% block extra_head %}{% endblock %}
     
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" type="text/css" href="base.css">
     
     {% block extra_css %}{% endblock %} 
 </head>
@@ -25,8 +25,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li class="current"><a href="{{ url_for(project_name + '.index') }}">Home</a></li>
                 </ul>
             </nav>
         </div>
