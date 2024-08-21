@@ -67,8 +67,3 @@ def cleanup_resources() -> None:
     # - Shutdown any running services
 
 # You can add more helper functions as needed
-
-if __name__ == "__main__":
-    # This block allows you to test the start function independently
-    result = start()
-    print(result)

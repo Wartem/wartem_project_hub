@@ -3,7 +3,7 @@ from .input_app import handle_input
 from .result_app import show_result as show_result_function
 
 import sys
-print(f"Python path in routes.py: {sys.path}")
+#print(f"Python path in routes.py: {sys.path}")
 try:
     import pandas as pd
     print("Pandas imported successfully")

@@ -71,6 +71,7 @@ import json
 
 def create_app():
     app = Flask(__name__)
+    app.secret_key = os.urandom(24)
 
     # Load configuration from project_config.json
     config_path = os.path.join(os.path.dirname(__file__), 'project_config.json')

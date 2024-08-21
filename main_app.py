@@ -5,12 +5,22 @@ import json
 
 import sys
 import os
+
+#print("Current working directory:", os.getcwd())
+#print("Python path in main_app.py:", sys.path)
+
 project_root = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, project_root)
+#print("Updated Python path:", sys.path)
 
 import sys
 
 app = Flask(__name__)
+app.secret_key = os.urandom(24)
+
+@app.before_request
+def clear_template_cache():
+    app.jinja_env.cache.clear()
 
 def get_project_info(project_dir):
     config_path = os.path.join(project_dir, 'project_config.json')
@@ -22,6 +32,7 @@ def get_project_info(project_dir):
 
 @app.route('/')
 def home():
+    clear_template_cache()
     projects_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'projects')
     projects = []
     for project in os.listdir(projects_dir):
