@@ -77,7 +77,7 @@ WartemProjectHub/
 
 ### Installation
 1. Clone the repository:
-https://github.com/wartem/WartemProjectHub
+git clone https://github.com/Wartem/WartemProjectHub
 
 2. Navigate to the project directory:
    cd WartemProjectHub
